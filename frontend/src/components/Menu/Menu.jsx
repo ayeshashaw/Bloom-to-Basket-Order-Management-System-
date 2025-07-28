@@ -25,7 +25,7 @@ const UserItemsList = () => {
 
   const fetchFoods = async () => {
     try {
-      const response = await fetch('http://localhost:3000/api/food/list');
+      const response = await fetch('https://bloom-to-basket.onrender.com/api/food/list');
       const result = await response.json();
       
       if (result.success) {
@@ -94,7 +94,6 @@ const UserItemsList = () => {
   const handleUpdateQuantity = async (itemId, quantity) => {
     try {
       if (quantity <= 0) {
-        // Remove item from cart if quantity is 0 or less
         await updateCartQuantity(itemId, 0);
       } else {
         await updateCartQuantity(itemId, quantity);
@@ -108,7 +107,6 @@ const UserItemsList = () => {
   const getTotalCartItems = () => {
     if (!isAuthenticated()) return 0;
     
-    // Calculate total items from context cart data
     let total = 0;
     foods.forEach(item => {
       const quantity = getCartQuantity(item._id);
@@ -120,7 +118,6 @@ const UserItemsList = () => {
   const getTotalCartValue = () => {
     if (!isAuthenticated()) return 0;
     
-    // Calculate total value from context cart data
     let total = 0;
     foods.forEach(item => {
       const quantity = getCartQuantity(item._id);
@@ -135,7 +132,6 @@ const UserItemsList = () => {
 
   return (
     <div className="user-items-container">
-      {/* Header with Cart Info */}
       <div className="items-header">
         <h2 className="items-title">Fresh Food Market</h2>
         {isAuthenticated() && (
@@ -146,7 +142,6 @@ const UserItemsList = () => {
         )}
       </div>
 
-      {/* Search and Filter Controls */}
       <div className="controls-section">
         <div className="search-bar">
           <input
@@ -184,12 +179,10 @@ const UserItemsList = () => {
         </div>
       </div>
 
-      {/* Results Count */}
       <div className="results-info">
         <p>Showing {filteredFoods.length} items</p>
       </div>
 
-      {/* Items Grid */}
       {filteredFoods.length === 0 ? (
         <div className="no-items">
           <p>No items found. Try adjusting your search or filters.</p>
@@ -203,7 +196,7 @@ const UserItemsList = () => {
               <div key={item._id} className="item-card">
                 <div className="item-image">
                   <img 
-                    src={`http://localhost:3000/images/${item.image}`} 
+                    src={`https://bloom-to-basket.onrender.com/images/${item.image}`} 
                     alt={item.name}
                     onError={(e) => {
                       e.target.src = '/placeholder-food.jpg';
