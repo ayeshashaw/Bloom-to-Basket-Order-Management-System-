@@ -2,7 +2,8 @@
 
 A full-stack food ordering application built with React and Node.js, featuring user authentication, food management, order processing, and payment integration.
 
-## 🚀Deployed Link : https://bloom-to-basket.vercel.app/
+## 🚀 Deployed Link
+**Live Demo:** https://bloom-to-basket.vercel.app/
 
 ## 🚀 Features
 
@@ -11,8 +12,7 @@ A full-stack food ordering application built with React and Node.js, featuring u
 - **Shopping Cart**: Add/remove items with quantity management
 - **Order Management**: Place orders and track order status
 - **Payment Processing**: Integrated with Stripe for secure payments
-- **Admin Panel**: Manage food items, orders, and users
-- Admin access - admin@gmail.com password - admin123
+- **Admin Panel**: Comprehensive admin dashboard for managing the entire system
 - **Responsive Design**: Works seamlessly on desktop and mobile devices
 - **File Upload**: Support for food images using Multer
 
@@ -90,12 +90,14 @@ A full-stack food ordering application built with React and Node.js, featuring u
 - npm or yarn package manager
 
 ### 1. Clone the Repository
+
 ```bash
 git clone https://github.com/ayeshashaw/Bloom-to-Basket-Order-Management-System-.git
-cd food-ordering-system
+cd bloom-to-basket
 ```
 
 ### 2. Backend Setup
+
 ```bash
 # Navigate to backend directory
 cd backend
@@ -109,10 +111,12 @@ touch .env
 
 #### Environment Variables
 Create a `.env` file in the backend directory with the following variables:
+
 ```env
 MONGODB_URI=mongodb://localhost:27017/food-ordering
 JWT_SECRET=your_jwt_secret_key
 PORT=5000
+STRIPE_SECRET_KEY=your_stripe_secret_key
 ```
 
 ```bash
@@ -123,6 +127,7 @@ npm run dev
 ```
 
 ### 3. Frontend Setup
+
 ```bash
 # Open a new terminal and navigate to frontend directory
 cd frontend
@@ -141,7 +146,48 @@ npm run dev
 3. **Browse Menu**: Explore available food items and add them to your cart
 4. **Place Orders**: Review your cart and proceed to checkout
 5. **Payment**: Complete payment using Stripe integration
-6. **Admin Access**: Access admin panel to manage food items and orders
+6. **Admin Access**: Use admin credentials to access the management panel
+
+## 🔐 Admin Access
+
+The application includes a comprehensive admin panel for managing food items, orders, and users.
+
+### 🛂 Default Admin Credentials
+
+```
+Email:    admin@gmail.com
+Password: admin123
+```
+
+> ⚠️ **Important**: These credentials are pre-seeded for testing and demonstration purposes only. Please change them in production environments.
+
+### 📋 Admin Capabilities
+
+Once logged in as an admin, you will have access to:
+
+- **🍕 Food Management**: Create, update, and delete food items
+- **📦 Order Management**: View all orders and update order statuses
+- **👥 User Management**: View and manage all registered users
+- **📊 Dashboard Analytics**: Overview of sales, orders, and system statistics
+- **🖼️ Image Upload**: Upload and manage food item images
+
+### 🔒 Protected Admin Routes
+
+The following routes are only accessible to authenticated admins:
+
+- `/admin/dashboard` – Overview of orders and statistics
+- `/admin/foods` – Manage food items and menu
+- `/admin/orders` – View and manage all customer orders
+- `/admin/users` – User management panel
+
+Unauthorized users will be automatically redirected to the login page when attempting to access these routes.
+
+### 🚪 How to Access Admin Panel
+
+1. Visit the application: [https://bloom-to-basket.vercel.app/](https://bloom-to-basket.vercel.app/)
+2. Click on "Login" in the navigation
+3. Enter the admin credentials listed above
+4. You'll be redirected to the admin dashboard upon successful authentication
 
 ## 🔑 API Endpoints
 
@@ -149,26 +195,32 @@ npm run dev
 - `POST /api/auth/register` - User registration
 - `POST /api/auth/login` - User login
 - `GET /api/auth/profile` - Get user profile
+- `POST /api/auth/logout` - User logout
 
 ### Food Management
 - `GET /api/food` - Get all food items
-- `POST /api/food` - Add new food item (Admin)
-- `PUT /api/food/:id` - Update food item (Admin)
-- `DELETE /api/food/:id` - Delete food item (Admin)
+- `POST /api/food` - Add new food item (Admin only)
+- `PUT /api/food/:id` - Update food item (Admin only)
+- `DELETE /api/food/:id` - Delete food item (Admin only)
+- `GET /api/food/:id` - Get specific food item
 
 ### Orders
 - `POST /api/orders` - Create new order
 - `GET /api/orders` - Get user orders
-- `GET /api/orders/all` - Get all orders (Admin)
-- `PUT /api/orders/:id` - Update order status (Admin)
+- `GET /api/orders/all` - Get all orders (Admin only)
+- `PUT /api/orders/:id` - Update order status (Admin only)
+- `DELETE /api/orders/:id` - Cancel order
 
+### Payment
+- `POST /api/payment/create-intent` - Create Stripe payment intent
+- `POST /api/payment/confirm` - Confirm payment
 
 ## 🚀 Deployment
 
 ### Backend Deployment
-1. Choose a hosting platform (Heroku, Railway, DigitalOcean)
-2. Set up environment variables
-3. Configure MongoDB connection (MongoDB Atlas recommended)
+1. Choose a hosting platform (Heroku, Railway, DigitalOcean, Render)
+2. Set up environment variables on your hosting platform
+3. Configure MongoDB connection (MongoDB Atlas recommended for production)
 4. Deploy using platform-specific instructions
 
 ### Frontend Deployment
@@ -177,14 +229,39 @@ npm run dev
 npm run build
 ```
 2. Deploy to hosting platform (Vercel, Netlify, GitHub Pages)
-3. Update API endpoints to point to your deployed backend
+3. Update API endpoints to point to your deployed backend URL
+
+### Environment Variables for Production
+Ensure you set up the following environment variables in your production environment:
+- `MONGODB_URI` - Your MongoDB connection string
+- `JWT_SECRET` - A secure JWT secret key
+- `STRIPE_SECRET_KEY` - Your Stripe secret key
+- `PORT` - Port number (usually provided by hosting platform)
 
 ## 📸 Screenshots
 
-<!-- Add screenshots of your application here -->
 ![Home Page](frontend/src/assets/images/home.png)
+*Home page with featured food items and hero section*
+
 ![Menu Page](frontend/src/assets/images/shop.png)
-![Admin Panel](frontend/src/assets/images/orderpage.png)
+*Complete food menu with category filters*
+
+![Order Page](frontend/src/assets/images/orderpage.png)
+*Order management and tracking interface*
+
+## 🧪 Testing
+
+To run tests (if implemented):
+
+```bash
+# Backend tests
+cd backend
+npm test
+
+# Frontend tests
+cd frontend
+npm test
+```
 
 ## 🤝 Contributing
 
@@ -196,11 +273,19 @@ We welcome contributions! Please follow these steps:
 4. Push to the branch (`git push origin feature/amazing-feature`)
 5. Open a Pull Request
 
+### Development Guidelines
+- Follow the existing code style
+- Write clear commit messages
+- Test your changes thoroughly
+- Update documentation as needed
 
+## 📝 License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
 ## 👥 Authors
 
-- **Ayesha Shaw** - *Initial work* - https://github.com/ayeshashaw
+- **Ayesha Shaw** - *Initial work* - [GitHub Profile](https://github.com/ayeshashaw)
 
 ## 🙏 Acknowledgments
 
@@ -208,13 +293,15 @@ We welcome contributions! Please follow these steps:
 - Express.js team for the robust framework
 - MongoDB for flexible data storage
 - Stripe for secure payment processing
+- Vite for the amazing build tool
 
 ## 📞 Support
 
 If you have any questions or need support, please:
-- Open an issue on GitHub
-- Email: ayeshashaw520@gmail.com
-- Connect on LinkedIn: https://www.linkedin.com/in/ayesha-shaw
+
+- 🐛 Open an issue on [GitHub Issues](https://github.com/ayeshashaw/Bloom-to-Basket-Order-Management-System-/issues)
+- 📧 Email: ayeshashaw520@gmail.com
+- 💼 Connect on LinkedIn: [Ayesha Shaw](https://www.linkedin.com/in/ayesha-shaw)
 
 ## 🔧 Built With
 
@@ -223,6 +310,19 @@ If you have any questions or need support, please:
 - [Express](https://expressjs.com/) - Web framework
 - [MongoDB](https://www.mongodb.com/) - Database
 - [Vite](https://vitejs.dev/) - Build tool
+- [Stripe](https://stripe.com/) - Payment processing
+
+## 🐛 Known Issues
+
+- None currently reported
+
+## 🗺️ Roadmap
+
+- [ ] Add email notifications for orders
+- [ ] Implement real-time order tracking
+- [ ] Add customer reviews and ratings
+- [ ] Mobile app development
+- [ ] Multi-language support
 
 ---
 
