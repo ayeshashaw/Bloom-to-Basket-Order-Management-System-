@@ -196,7 +196,7 @@ const UserItemsList = () => {
               <div key={item._id} className="item-card">
                 <div className="item-image">
                   <img 
-                    src={`http://localhost:3000/images/${item.image}`} 
+                    src={`https://bloom-to-basket.onrender.com/images/${item.image}`} 
                     alt={item.name}
                     onError={(e) => {
                       e.target.src = '/placeholder-food.jpg';
