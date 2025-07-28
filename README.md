@@ -182,9 +182,9 @@ npm run build
 ## 📸 Screenshots
 
 <!-- Add screenshots of your application here -->
-![Home Page](screenshots/home.png)
-![Menu Page](screenshots/menu.png)
-![Admin Panel](screenshots/admin.png)
+![Home Page](frontend/src/assets/images/home.png)
+![Menu Page](frontend/src/assets/images/shop.png)
+![Admin Panel](frontend/src/assets/images/orderpage.png)
 
 ## 🤝 Contributing
 
