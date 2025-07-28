@@ -200,7 +200,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## 👥 Authors
 
-- **ayeshashaw** - *Initial work* - (https://github.com/ayeshashaw)
+- **Ayesha Shaw** - *Initial work* - https://github.com/ayeshashaw
 
 ## 🙏 Acknowledgments
 
@@ -214,7 +214,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 If you have any questions or need support, please:
 - Open an issue on GitHub
 - Email: your-ayeshashaw520@gmail.com
-- Connect on LinkedIn: [Your Profile](https://www.linkedin.com/in/ayesha-shaw)
+- Connect on LinkedIn: https://www.linkedin.com/in/ayesha-shaw
 
 ## 🔧 Built With
 
