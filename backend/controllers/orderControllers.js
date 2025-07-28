@@ -1,5 +1,5 @@
 const foodModel = require("../models/foodModels");
-const orderModel = require("../models/OrdersModel");
+const orderModel = require("../models/ordersModel")
 
 const placeOrder = async (req, res) => {
   try {
@@ -13,6 +13,7 @@ const placeOrder = async (req, res) => {
       });
     }
 
+
     if (!address || !amount || !paymentMethod) {
       return res.status(400).json({
         success: false,
@@ -20,7 +21,6 @@ const placeOrder = async (req, res) => {
       });
     }
 
-    // Validate and update food quantities
     for (let item of items) {
       const food = await foodModel.findById(item.foodId);
       
@@ -38,7 +38,6 @@ const placeOrder = async (req, res) => {
         });
       }
 
-      // Reduce food quantity
       await foodModel.findByIdAndUpdate(
         item.foodId,
         { $inc: { quantity: -item.quantity } }
