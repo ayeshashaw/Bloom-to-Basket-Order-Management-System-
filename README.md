@@ -1,4 +1,4 @@
-# Food Ordering System
+# Bloom to Basket (Order Management System)
 
 A full-stack food ordering application built with React and Node.js, featuring user authentication, food management, order processing, and payment integration.
 
@@ -22,7 +22,6 @@ A full-stack food ordering application built with React and Node.js, featuring u
 - **Mongoose**: MongoDB object data modeling (ODM)
 - **JWT**: JSON Web Tokens for authentication
 - **bcryptjs**: Password hashing and encryption
-- **Stripe**: Payment processing integration
 - **Multer**: File upload handling for images
 - **CORS**: Cross-Origin Resource Sharing
 - **Validator**: String validation and sanitization
@@ -204,7 +203,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## 👥 Authors
 
-- **Your Name** - *Initial work* - [YourGitHub](https://github.com/yourusername)
+- **Your Name** - *Initial work* - [YourGitHub](https://github.com/ayeshashaw)
 
 ## 🙏 Acknowledgments
 
@@ -218,7 +217,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 If you have any questions or need support, please:
 - Open an issue on GitHub
 - Email: your-email@example.com
-- Connect on LinkedIn: [Your Profile](https://linkedin.com/in/yourprofile)
+- Connect on LinkedIn: [Your Profile](https://www.linkedin.com/in/ayesha-shaw)
 
 ## 🔧 Built With
 
@@ -226,7 +225,6 @@ If you have any questions or need support, please:
 - [Node.js](https://nodejs.org/) - Backend runtime
 - [Express](https://expressjs.com/) - Web framework
 - [MongoDB](https://www.mongodb.com/) - Database
-- [Stripe](https://stripe.com/) - Payment processing
 - [Vite](https://vitejs.dev/) - Build tool
 
 ---
