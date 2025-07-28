@@ -2,6 +2,8 @@
 
 A full-stack food ordering application built with React and Node.js, featuring user authentication, food management, order processing, and payment integration.
 
+## 🚀Deployed Link : https://bloom-to-basket.vercel.app/
+
 ## 🚀 Features
 
 - **User Authentication**: Secure login and registration system
@@ -10,6 +12,7 @@ A full-stack food ordering application built with React and Node.js, featuring u
 - **Order Management**: Place orders and track order status
 - **Payment Processing**: Integrated with Stripe for secure payments
 - **Admin Panel**: Manage food items, orders, and users
+- Admin access - admin@gmail.com password - admin123
 - **Responsive Design**: Works seamlessly on desktop and mobile devices
 - **File Upload**: Support for food images using Multer
 
