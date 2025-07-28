@@ -1,0 +1,318 @@
+/* About.css */
+
+.about-page {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+}
+
+/* Hero Section */
+.about-hero {
+  background: linear-gradient(135deg, #f5f2e8 0%, #e8e2d4 100%);
+  padding: 120px 0 80px 0;
+  text-align: center;
+}
+
+.about-hero-content h1 {
+  font-size: 56px;
+  font-weight: bold;
+  margin: 0 0 20px 0;
+  color: #2c3e50;
+}
+
+.hero-green {
+  color: #27ae60;
+}
+
+.hero-subtitle {
+  font-size: 20px;
+  color: #666;
+  margin: 0;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Main Content */
+.about-content {
+  padding: 80px 0;
+  background-color: white;
+}
+
+.about-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 30px;
+}
+
+.content-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 60px;
+  align-items: center;
+}
+
+.content-text {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.text-section p {
+  font-size: 18px;
+  color: #555;
+  margin: 0;
+  line-height: 1.8;
+}
+
+.intro-text {
+  font-size: 20px !important;
+  color: #2c3e50 !important;
+  font-weight: 500;
+}
+
+.closing-text {
+  color: #27ae60 !important;
+  font-weight: 500;
+}
+
+.content-visual {
+  display: flex;
+  justify-content: center;
+}
+
+.visual-card {
+  background: #f8f9fa;
+  padding: 40px 30px;
+  border-radius: 20px;
+  text-align: center;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.farmer-illustration {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.farmer-emoji,
+.basket-emoji,
+.home-emoji {
+  font-size: 40px;
+  font-family: 'Apple Color Emoji', 'Segoe UI Emoji', 'Noto Color Emoji', sans-serif;
+}
+
+.arrow {
+  font-size: 24px;
+  color: #27ae60;
+}
+
+.visual-caption {
+  font-size: 16px;
+  color: #666;
+  font-weight: 500;
+  margin: 0;
+}
+
+/* Values Section */
+.about-values {
+  background-color: #f8f9fa;
+  padding: 80px 0;
+}
+
+.about-values h2 {
+  font-size: 42px;
+  font-weight: bold;
+  text-align: center;
+  margin: 0 0 60px 0;
+  color: #2c3e50;
+}
+
+.values-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+}
+
+.value-item {
+  background: white;
+  padding: 40px 30px;
+  border-radius: 15px;
+  text-align: center;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease;
+}
+
+.value-item:hover {
+  transform: translateY(-5px);
+}
+
+.value-icon {
+  font-size: 50px;
+  margin-bottom: 20px;
+  font-family: 'Apple Color Emoji', 'Segoe UI Emoji', 'Noto Color Emoji', sans-serif;
+}
+
+.value-item h3 {
+  font-size: 24px;
+  font-weight: 600;
+  margin: 0 0 15px 0;
+  color: #2c3e50;
+}
+
+.value-item p {
+  font-size: 16px;
+  color: #666;
+  margin: 0;
+}
+
+/* Call to Action */
+.about-cta {
+  background: linear-gradient(135deg, #27ae60, #229954);
+  padding: 80px 0;
+  color: white;
+  text-align: center;
+}
+
+.cta-content h2 {
+  font-size: 42px;
+  font-weight: bold;
+  margin: 0 0 20px 0;
+}
+
+.cta-content p {
+  font-size: 18px;
+  margin: 0 0 40px 0;
+  opacity: 0.9;
+}
+
+.cta-buttons {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+}
+
+.cta-primary,
+.cta-secondary {
+  padding: 15px 30px;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.cta-primary {
+  background-color: white;
+  color: #27ae60;
+}
+
+.cta-primary:hover {
+  background-color: #f8f9fa;
+  transform: translateY(-2px);
+}
+
+.cta-secondary {
+  background-color: transparent;
+  color: white;
+  border: 2px solid white;
+}
+
+.cta-secondary:hover {
+  background-color: white;
+  color: #27ae60;
+  transform: translateY(-2px);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .about-hero {
+    padding: 80px 0 60px 0;
+  }
+  
+  .about-hero-content h1 {
+    font-size: 42px;
+  }
+  
+  .hero-subtitle {
+    font-size: 18px;
+  }
+  
+  .about-content {
+    padding: 60px 0;
+  }
+  
+  .about-container {
+    padding: 0 20px;
+  }
+  
+  .content-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+  
+  .text-section p {
+    font-size: 16px;
+  }
+  
+  .intro-text {
+    font-size: 18px !important;
+  }
+  
+  .about-values {
+    padding: 60px 0;
+  }
+  
+  .about-values h2 {
+    font-size: 32px;
+  }
+  
+  .values-grid {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+  
+  .about-cta {
+    padding: 60px 0;
+  }
+  
+  .cta-content h2 {
+    font-size: 32px;
+  }
+  
+  .cta-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .cta-primary,
+  .cta-secondary {
+    width: 200px;
+  }
+}
+
+@media (max-width: 480px) {
+  .about-hero-content h1 {
+    font-size: 32px;
+  }
+  
+  .farmer-illustration {
+    gap: 10px;
+  }
+  
+  .farmer-emoji,
+  .basket-emoji,
+  .home-emoji {
+    font-size: 32px;
+  }
+  
+  .arrow {
+    font-size: 20px;
+  }
+  
+  .visual-card {
+    padding: 30px 20px;
+  }
+}

@@ -1,0 +1,74 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 40px;
+  background-color: white;
+  border-bottom: 1px solid #e5e5e5;
+  font-family: Arial, sans-serif;
+}
+
+.navbar-left {
+  flex: 1;
+}
+
+.logo {
+  font-size: 26px;
+  font-weight: bold;
+  color: #2c3e50;
+}
+
+.logo-star {
+  color: #27ae60;
+  margin: 0 2px;
+}
+
+.login-btn {
+  padding: 12px 24px;
+  border: none;
+  border-radius: 6px;
+  font-size: 15px;
+  font-weight: 500;
+  cursor: pointer;
+  background-color: #27ae60;
+  color: white;
+  transition: background-color 0.2s ease;
+  margin-left: 12px;
+}
+
+.login-btn:hover {
+  background-color: #229954;
+}
+
+.admin-text {
+  padding: 8px 16px;
+  color:  #229954;
+  border-radius: 20px;
+  font-size: 14px;
+  font-weight: 600;
+  text-transform: uppercase;
+
+}
+
+.navbar-right {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    padding: 20px;
+    gap: 20px;
+  }
+
+  .navbar-left,
+  .navbar-right {
+    flex: none;
+  }
+
+  .navbar-right {
+    justify-content: center;
+  }
+}

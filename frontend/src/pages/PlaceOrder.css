@@ -1,0 +1,260 @@
+.place-order-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f8f9fa;
+  min-height: 100vh;
+}
+
+.place-order-content {
+  display: grid;
+  grid-template-columns: 1fr 400px;
+  gap: 30px;
+}
+
+.order-form-section {
+  background: white;
+  border-radius: 12px;
+  padding: 30px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.order-summary-section {
+  background: white;
+  border-radius: 12px;
+  padding: 30px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  height: fit-content;
+  position: sticky;
+  top: 20px;
+}
+
+.section-title {
+  color: #2c3e50;
+  font-size: 24px;
+  font-weight: 600;
+  margin: 0 0 25px 0;
+  padding-bottom: 15px;
+  border-bottom: 2px solid #27ae60;
+}
+
+.section-subtitle {
+  color: #2c3e50;
+  font-size: 18px;
+  font-weight: 600;
+  margin: 25px 0 15px 0;
+}
+
+.order-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.form-row {
+  display: flex;
+  gap: 15px;
+}
+
+.form-group {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.form-label {
+  font-weight: 500;
+  color: #2c3e50;
+  margin-bottom: 8px;
+  font-size: 14px;
+}
+
+.form-input,
+.form-textarea {
+  padding: 12px 15px;
+  border: 2px solid #e5e5e5;
+  border-radius: 8px;
+  font-size: 14px;
+  background-color: #fff;
+  transition: border-color 0.3s ease;
+}
+
+.form-input:focus,
+.form-textarea:focus {
+  outline: none;
+  border-color: #27ae60;
+  box-shadow: 0 0 0 3px rgba(39, 174, 96, 0.1);
+}
+
+.form-input[readonly] {
+  background-color: #f8f9fa;
+  color: #7f8c8d;
+}
+
+.form-textarea {
+  resize: vertical;
+  min-height: 80px;
+  font-family: inherit;
+}
+
+.payment-section {
+  margin-top: 10px;
+}
+
+.payment-options {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.payment-option {
+  display: flex;
+  align-items: center;
+  padding: 15px;
+  border: 2px solid #e5e5e5;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.payment-option:hover {
+  border-color: #27ae60;
+  background-color: #f8fff8;
+}
+
+.payment-option input[type="radio"] {
+  margin-right: 12px;
+  transform: scale(1.2);
+}
+
+.payment-option input[type="radio"]:checked + .payment-label {
+  color: #27ae60;
+  font-weight: 600;
+}
+
+.payment-option:has(input:checked) {
+  border-color: #27ae60;
+  background-color: #f8fff8;
+}
+
+.payment-label {
+  font-size: 16px;
+  color: #2c3e50;
+}
+
+.place-order-btn {
+  background-color: #27ae60;
+  color: white;
+  border: none;
+  padding: 18px 30px;
+  border-radius: 10px;
+  font-size: 18px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-top: 20px;
+}
+
+.place-order-btn:hover {
+  background-color: #229954;
+}
+
+.place-order-btn:disabled {
+  background-color: #95a5a6;
+  cursor: not-allowed;
+}
+
+.order-items {
+  margin-bottom: 25px;
+}
+
+.order-item {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 15px 0;
+  border-bottom: 1px solid #f1f2f6;
+}
+
+.order-item:last-child {
+  border-bottom: none;
+}
+
+.order-item-image {
+  width: 60px;
+  height: 60px;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+.order-item-details {
+  flex: 1;
+}
+
+.order-item-details h4 {
+  color: #2c3e50;
+  font-size: 16px;
+  font-weight: 600;
+  margin: 0 0 5px 0;
+}
+
+.order-item-details p {
+  color: #7f8c8d;
+  font-size: 14px;
+  margin: 0;
+}
+
+.order-item-total {
+  color: #27ae60;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.order-totals {
+  border-top: 2px solid #f1f2f6;
+  padding-top: 20px;
+}
+
+.total-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+  color: #2c3e50;
+}
+
+.final-total {
+  border-top: 2px solid #27ae60;
+  padding-top: 15px;
+  margin-top: 15px;
+  font-size: 18px;
+}
+
+@media (max-width: 768px) {
+  .place-order-container {
+    padding: 10px;
+  }
+  
+  .place-order-content {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  
+  .order-form-section,
+  .order-summary-section {
+    padding: 20px;
+  }
+  
+  .form-row {
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .section-title {
+    font-size: 20px;
+  }
+  
+  .order-summary-section {
+    position: static;
+  }
+}
