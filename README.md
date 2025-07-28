@@ -213,7 +213,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 If you have any questions or need support, please:
 - Open an issue on GitHub
-- Email: your-ayeshashaw520@gmail.com
+- Email: ayeshashaw520@gmail.com
 - Connect on LinkedIn: https://www.linkedin.com/in/ayesha-shaw
 
 ## 🔧 Built With
