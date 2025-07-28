@@ -20,13 +20,12 @@ A comprehensive full-stack food ordering application built with React and Node.j
 - **Node.js**: JavaScript runtime environment.
 - **Express.js**: Web application framework.
 - **MongoDB**: NoSQL database for data storage.
-- **Mongoose**: MongoDB object data modeling (ODM).
+- **Mongoose**: MongoDB object data modelling (ODM).
 - **JWT**: JSON Web Tokens for authentication.
 - **bcryptjs**: For password hashing and encryption.
-- **Stripe**: Payment processing integration.
 - **Multer**: Handles file uploads for images.
 - **CORS**: Cross-Origin Resource Sharing.
-- **Validator**: For string validation and sanitization.
+- **Validator**: For string validation and sanitisation.
 
 #### Frontend
 
@@ -93,7 +92,7 @@ A comprehensive full-stack food ordering application built with React and Node.j
 #### 1. Clone the Repository
 
 ```bash
-git clone <repository-url>
+git clone https://github.com/ayeshashaw/Bloom-to-Basket-Order-Management-System-.git
 cd food-ordering-system
 ```
 
@@ -106,7 +105,7 @@ cd backend
 # Install dependencies
 npm install
 
-# Create environment variables file
+# Create an environment variables file
 cp .env.example .env
 ```
 
