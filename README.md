@@ -1,4 +1,4 @@
-## Food Ordering System
+## Bloom to Basket(Order Management System)
 
 A comprehensive full-stack food ordering application built with React and Node.js, featuring user authentication, food management, order processing, and payment integration.
 
