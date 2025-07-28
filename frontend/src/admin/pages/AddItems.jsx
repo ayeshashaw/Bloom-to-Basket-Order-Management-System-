@@ -59,7 +59,7 @@ const AddItems = () => {
     formDataToSend.append('image', image);
 
     try {
-      const response = await fetch('http://localhost:3000/api/food/add', {
+      const response = await fetch('https://bloom-to-basket.onrender.com', {
         method: 'POST',
         headers: {
           'Authorization': `Bearer ${token}`
