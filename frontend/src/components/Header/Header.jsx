@@ -1,8 +1,15 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import './Header.css';
 import home from "../../assets/images/home.jpeg";
 
 const Header = () => {
+  const navigate = useNavigate();
+
+  const handleShopClick = () => {
+    navigate('/shop');  
+  };
+
   return (
     <div className='header'>
       <div className='header-content'>
@@ -16,7 +23,7 @@ const Header = () => {
             Support sustainable agriculture and enjoy healthy, delicious food.
           </p>
           <div className='header-buttons'>
-            <button className='shop-btn'>Shop Now</button>
+            <button className='shop-btn' onClick={handleShopClick}>Shop Now</button>
             <button className='farmers-btn'>Meet Our Farmers</button>
           </div>
         </div>
