@@ -9,7 +9,7 @@ const AppContextProvider = ({children}) => {
     const [loading, setLoading] = useState(false)
     const [cart, setCart] = useState({})
 
-    const API_URL = 'http://localhost:3000/api/auth'
+    const API_URL = 'https://bloom-to-basket.onrender.com/api/auth'
 
     useEffect(() => {
         const savedToken = localStorage.getItem('token')
