@@ -19,7 +19,7 @@ const ItemsList = () => {
 
   const fetchFoods = async () => {
     try {
-      const response = await fetch('http://localhost:3000/api/food/list');
+      const response = await fetch('https://bloom-to-basket.onrender.com/api/food/list');
       const result = await response.json();
       
       if (result.success) {
@@ -38,7 +38,7 @@ const ItemsList = () => {
   const handleDelete = async (id) => {
     if (window.confirm('Are you sure you want to delete this item?')) {
       try {
-        const response = await fetch('http://localhost:3000/api/food/remove-food', {
+        const response = await fetch('https://bloom-to-basket.onrender.com/api/food/remove-food', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
@@ -75,7 +75,7 @@ const ItemsList = () => {
 
   const handleEditSubmit = async (id) => {
     try {
-      const response = await fetch(`http://localhost:3000/api/food/${id}`, {
+      const response = await fetch(`https://bloom-to-basket.onrender.com/api/food/${id}`, {
         method: 'PUT',
         headers: {
           'Content-Type': 'application/json',
@@ -128,7 +128,7 @@ const ItemsList = () => {
             <div key={item._id} className="item-card">
               <div className="item-image">
                 <img 
-                  src={`http://localhost:3000/images/${item.image}`} 
+                  src={`https://bloom-to-basket.onrender.com/images/${item.image}`} 
                   alt={item.name}
                   onError={(e) => {
                     e.target.src = '/placeholder-food.jpg';
