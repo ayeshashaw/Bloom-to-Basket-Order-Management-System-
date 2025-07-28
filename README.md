@@ -88,7 +88,7 @@ A full-stack food ordering application built with React and Node.js, featuring u
 
 ### 1. Clone the Repository
 ```bash
-git clone https://github.com/yourusername/food-ordering-system.git
+git clone https://github.com/ayeshashaw/Bloom-to-Basket-Order-Management-System-.git
 cd food-ordering-system
 ```
 
@@ -160,9 +160,6 @@ npm run dev
 - `GET /api/orders/all` - Get all orders (Admin)
 - `PUT /api/orders/:id` - Update order status (Admin)
 
-### Payment
-- `POST /api/payment/create-intent` - Create Stripe payment intent
-- `POST /api/payment/confirm` - Confirm payment
 
 ## 🚀 Deployment
 
@@ -216,7 +213,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 If you have any questions or need support, please:
 - Open an issue on GitHub
-- Email: your-email@example.com
+- Email: your-ayeshashaw520@gmail.com
 - Connect on LinkedIn: [Your Profile](https://www.linkedin.com/in/ayesha-shaw)
 
 ## 🔧 Built With
