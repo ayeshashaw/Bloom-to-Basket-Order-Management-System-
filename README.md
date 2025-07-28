@@ -109,7 +109,6 @@ Create a `.env` file in the backend directory with the following variables:
 ```env
 MONGODB_URI=mongodb://localhost:27017/food-ordering
 JWT_SECRET=your_jwt_secret_key
-STRIPE_SECRET_KEY=your_stripe_secret_key
 PORT=5000
 ```
 
@@ -194,9 +193,7 @@ We welcome contributions! Please follow these steps:
 4. Push to the branch (`git push origin feature/amazing-feature`)
 5. Open a Pull Request
 
-## 📝 License
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
 ## 👥 Authors
 
