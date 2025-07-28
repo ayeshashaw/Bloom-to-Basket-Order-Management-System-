@@ -26,7 +26,7 @@ const OrderList = () => {
 
   const fetchOrders = async () => {
     try {
-      const response = await fetch('http://localhost:3000/api/order/admin/list', {
+      const response = await fetch('https://bloom-to-basket.onrender.com/api/order/admin/list', {
         headers: {
           'Authorization': `Bearer ${token}`
         }
@@ -49,7 +49,7 @@ const OrderList = () => {
 
   const updateOrderStatus = async (orderId, newStatus) => {
     try {
-      const response = await fetch('http://localhost:3000/api/order/admin/status', {
+      const response = await fetch('https://bloom-to-basket.onrender.com/api/order/admin/status', {
         method: 'PUT',
         headers: {
           'Content-Type': 'application/json',
