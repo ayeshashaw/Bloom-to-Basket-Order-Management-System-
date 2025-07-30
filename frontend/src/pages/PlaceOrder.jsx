@@ -307,7 +307,7 @@ const PlaceOrder = () => {
             {cartItems.map((item) => (
               <div key={item._id} className="order-item">
                 <img
-                  src={`http://localhost:3000/images/${item.image}`}
+                  src={`https://bloom-to-basket.onrender.com/images/${item.image}`}
                   alt={item.name}
                   className="order-item-image"
                 />
