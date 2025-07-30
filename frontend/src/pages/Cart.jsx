@@ -27,7 +27,7 @@ const Cart = () => {
 
   const fetchFoods = async () => {
     try {
-      const response = await fetch('http://localhost:3000/api/food/list');
+      const response = await fetch('https://bloom-to-basket.onrender.com/api/food/list');
       const result = await response.json();
       
       if (result.success) {
