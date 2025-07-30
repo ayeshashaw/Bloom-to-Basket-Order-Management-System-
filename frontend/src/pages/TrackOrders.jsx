@@ -61,7 +61,7 @@ const TrackOrders = () => {
     setCancellingOrderId(orderId);
     
     try {
-      const response = await fetch('http://localhost:3000/api/order/cancel', {
+      const response = await fetch('https://bloom-to-basket.onrender.com/api/order/cancel', {
         method: 'PUT',
         headers: {
           'Content-Type': 'application/json',
