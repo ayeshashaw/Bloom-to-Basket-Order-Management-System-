@@ -307,7 +307,6 @@ If you have any questions or need support, please:
 - [Express](https://expressjs.com/) - Web framework
 - [MongoDB](https://www.mongodb.com/) - Database
 - [Vite](https://vitejs.dev/) - Build tool
-- [Stripe](https://stripe.com/) - Payment processing
 
 ## 🐛 Known Issues
 
