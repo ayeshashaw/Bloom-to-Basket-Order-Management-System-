@@ -43,7 +43,7 @@ const PlaceOrder = () => {
 
   const fetchFoods = async () => {
     try {
-      const response = await fetch('http://localhost:3000/api/food/list');
+      const response = await fetch('https://bloom-to-basket.onrender.com/api/food/list');
       const result = await response.json();
       
       if (result.success) {
@@ -119,7 +119,7 @@ const PlaceOrder = () => {
         status: 'pending'
       };
 
-      const response = await fetch('http://localhost:3000/api/order/place', {
+      const response = await fetch('https://bloom-to-basket.onrender.com/api/order/place', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
