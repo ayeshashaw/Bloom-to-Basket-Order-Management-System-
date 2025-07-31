@@ -116,7 +116,6 @@ Create a `.env` file in the backend directory with the following variables:
 MONGODB_URI=mongodb://localhost:27017/food-ordering
 JWT_SECRET=your_jwt_secret_key
 PORT=5000
-STRIPE_SECRET_KEY=your_stripe_secret_key
 ```
 
 ```bash
