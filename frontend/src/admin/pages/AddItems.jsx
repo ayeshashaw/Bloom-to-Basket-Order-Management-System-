@@ -59,8 +59,13 @@ const AddItems = () => {
     formDataToSend.append('image', image);
 
     try {
-      // Fixed: Added proper API endpoint path
-      const response = await fetch('https://bloom-to-basket.onrender.com/api/food/add', {
+      console.log('Attempting to add item with token:', token ? 'Token exists' : 'No token');
+      
+      const API_BASE_URL = 'https://bloom-to-basket.onrender.com';
+      
+      let endpoint = '/api/food/add';
+      
+      const response = await fetch(`${API_BASE_URL}${endpoint}`, {
         method: 'POST',
         headers: {
           'Authorization': `Bearer ${token}`
@@ -68,7 +73,24 @@ const AddItems = () => {
         body: formDataToSend
       });
 
+      console.log('Response status:', response.status);
+      console.log('Response headers:', response.headers);
+
+      if (!response.ok) {
+        const errorText = await response.text();
+        console.error('Error response:', errorText);
+        throw new Error(`HTTP ${response.status}: ${errorText}`);
+      }
+
+      const contentType = response.headers.get('content-type');
+      if (!contentType || !contentType.includes('application/json')) {
+        const text = await response.text();
+        console.error('Non-JSON response:', text);
+        throw new Error(`Expected JSON but got: ${contentType}`);
+      }
+
       const result = await response.json();
+      console.log('Success response:', result);
 
       if (result.success) {
         alert('Food item added successfully!');
