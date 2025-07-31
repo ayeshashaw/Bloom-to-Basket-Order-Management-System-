@@ -59,7 +59,8 @@ const AddItems = () => {
     formDataToSend.append('image', image);
 
     try {
-      const response = await fetch('https://bloom-to-basket.onrender.com', {
+      // Fixed: Added proper API endpoint path
+      const response = await fetch('https://bloom-to-basket.onrender.com/api/food/add', {
         method: 'POST',
         headers: {
           'Authorization': `Bearer ${token}`
@@ -85,7 +86,7 @@ const AddItems = () => {
       }
     } catch (error) {
       console.error('Error:', error);
-      alert('Failed to add food item');
+      alert('Failed to add food item. Please check your connection and try again.');
     } finally {
       setLoading(false);
     }
