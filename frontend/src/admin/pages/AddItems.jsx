@@ -59,7 +59,7 @@ const AddItems = () => {
     formDataToSend.append('image', image);
 
     try {
-      console.log('Attempting to add item with token:', token ? 'Token exists' : 'No token');
+      //console.log('Attempting to add item with token:', token ? 'Token exists' : 'No token');
       
       const API_BASE_URL = 'https://bloom-to-basket.onrender.com';
       
@@ -73,8 +73,8 @@ const AddItems = () => {
         body: formDataToSend
       });
 
-      console.log('Response status:', response.status);
-      console.log('Response headers:', response.headers);
+      //console.log('Response status:', response.status);
+      //console.log('Response headers:', response.headers);
 
       if (!response.ok) {
         const errorText = await response.text();
