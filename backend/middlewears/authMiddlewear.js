@@ -51,28 +51,9 @@ const requireAdmin = (req, res, next) => {
   next();
 };
 
-const requireUserOrAdmin = (req, res, next) => {
-  if (!req.user) {
-    return res.status(401).json({ 
-      success: false, 
-      message: "Authentication required" 
-    });
-  }
 
-  const targetUserId = req.params.userId || req.body.userId;
-  
-  if (req.user.role === 'admin' || req.user.id.toString() === targetUserId) {
-    next();
-  } else {
-    return res.status(403).json({ 
-      success: false, 
-      message: "Access denied" 
-    });
-  }
-};
 
 module.exports = {
   authenticateToken,
   requireAdmin,
-  requireUserOrAdmin
 };
